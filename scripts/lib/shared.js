@@ -90,7 +90,7 @@ export function convertDocumentation(documentation) {
   execSync(
     `pandoc ${path.join(documentation.folder, documentation.entrypoint)} -o "${path.join(documentation.folder, documentation.pdfFilename)}" --from markdown --template ${path.join(documentation.folder, '..', documentation.texTemplate)} --listings ${sharedPandocLuaFilters}`,
     {
-      cwd: '/wspace/az-tf/documentation',
+      cwd: `${documentation.folder}`,
     },
   ).toString();
 }

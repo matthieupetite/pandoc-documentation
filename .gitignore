@@ -11,6 +11,7 @@ dist
 *.tfvars
 
 **/**/*.tfstate
+**/**/*.pdf
 **/**/*.tfvars
 **/**/*.out
 **/**/*.terraform.*
@@ -23,3 +24,4 @@ dist
 **/specification.docx
 .DS_Store
 **/**/*.bkp
+

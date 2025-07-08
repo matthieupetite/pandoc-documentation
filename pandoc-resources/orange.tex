@@ -915,7 +915,7 @@ $else$
   \definecolor{orange}{HTML}{FF6600}
   \color{primarycolor}
   \clearpairofpagestyles
-  \ihead*{$if(header-left)$$header-left$$else$$if(disable-logo-in-header)$$else$\raisebox{-0.3\baselineskip}{\includegraphics[height=1cm]{./infra/docs/pandoc-ressources/images/orange-business-logo.png}}$endif$$endif$}
+  \ihead*{$if(header-left)$$header-left$$else$$if(disable-logo-in-header)$$else$\raisebox{-0.3\baselineskip}{\includegraphics[height=1cm]{$customer-logo$}}$endif$$endif$}
   \chead*{$if(header-center)$$title$$else$$title$$endif$}
   \ohead*{$if(header-right)$$header-right$$else$$date$$endif$}
   \ifoot*{$if(footer-left)$$footer-left$$else$$for(author)$$author$$sep$, $endfor$$endif$}
@@ -1052,7 +1052,7 @@ $else$
 	% ---------------------------------------------------------------------------- %
 	\tikz[remember picture, overlay]
 	\node[anchor=north west, inner sep=10pt, xshift=40pt, yshift=-100pt] at (current page.north west) {
-		\includegraphics[width=0.3\textwidth,keepaspectratio]{./infra/docs/pandoc-ressources/images/orange-business-logo.png}
+		\includegraphics[width=0.3\textwidth,keepaspectratio]{$customer-logo$}
 	};
 
 	\vfill
