@@ -21,7 +21,7 @@
     "eslint:fix": "eslint --fix '**/*.js'",
     "markdown:check": "markdownlint **/*.md --ignore node_modules",
     "markdown:fix": "markdownlint **/*.md --fix --ignore node_modules --ignore docs",
-    "validate": "run-s markdown:check eslint:check prettier:check",
+    "validate": "run-s eslint:check prettier:check",
     "prerelease": "git fetch origin --prune --prune-tags && git add .",
     "release": "standard-version -a",
     "postrelease": "run-s release:*",

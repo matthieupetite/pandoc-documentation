@@ -36,6 +36,7 @@ export function listDocumentations() {
           folder: path.join(documentationPath, folder),
           texTemplate: metadata.texTemplate || './pandoc-ressources/april.tex',
           sharedPandocLuaFilters: metadata.sharedPandocLuaFilters,
+          prebuildtasks: metadata.prebuildtasks || [],
         });
       }
     });

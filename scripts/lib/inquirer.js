@@ -10,7 +10,7 @@ export async function askDocumentationToConvert() {
   }
 
   const choices = documentations.map((doc) => ({
-    name: `${doc.name} (${doc.folder})`,
+    name: `${doc.name}`,
     value: doc,
   }));
 

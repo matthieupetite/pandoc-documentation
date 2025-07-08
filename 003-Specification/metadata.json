@@ -1,0 +1,16 @@
+{
+    "name": "Specification",
+    "entrypoint": "./0-main.md",
+    "pdfFilename":"specification.pdf",
+    "appendVersion": true,
+    "texTemplate": "./pandoc-resources/april.tex",
+    "sharedPandocLuaFilters": [
+        "linebreak.lua",
+        "htmltable.lua",
+        "include-files.lua",
+        "headerfilter.lua"
+    ],
+    "prebuildtasks": [
+        "generateSpecification"
+    ]
+}
