@@ -1,0 +1,13 @@
+{
+    "name": "Work with Data Science Starter Kit",
+    "entrypoint": "./0-main.md",
+    "pdfFilename":"work-with-data-science-starter-kit.pdf",
+    "appendVersion": true,
+    "texTemplate": "./pandoc-resources/april.tex",
+    "sharedPandocLuaFilters": [
+        "linebreak.lua",
+        "htmltable.lua",
+        "include-files.lua",
+        "headerfilter.lua"
+    ]
+}
