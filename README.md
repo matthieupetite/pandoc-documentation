@@ -7,6 +7,7 @@
   - [Overview](#overview)
   - [Available documentations](#available-documentations)
   - [Create a documentation](#create-a-documentation)
+  - [Available commands](#available-commands)
 
 ## Overview
 
@@ -16,10 +17,10 @@ This repository contains the documentation for the Datascience Gitops project, w
 
 Here is the list of available documentations:
 
-| Title                                | Purpose                                                         | Path                                                                                 |
-| ------------------------------------ | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Datascience Platform Specification   | Present the Infrastructure of the datascience platform on azure | [specification](../infra/docs/0-main.md)                                             |
-| Work with the Datasciencd Starterkit | Present how to work with the terraform project                  | [Work with the datascience Starterkit](./work-with-datascience-starterkit/0-main.md) |
+| Title                                | Path.                                                               |
+| ------------------------------------ | ------------------------------------------------------------------- |
+| Work with the Datascience Starterkit | [Go to documentation](./work-with-datascience-starterkit/0-main.md) |
+| Sample documentation                 | [Go to documentation](./sample-documentation/0-main.md)             |
 
 ## Create a documentation
 
@@ -47,3 +48,13 @@ The properties are:
 | texTemplate   | The path to the LaTeX template file used for generating the PDF.                                              |
 
 : Property of the documentation metadata
+
+You can copy paste the sample-documentation folder it's a good starting proing
+
+## Available commands
+
+To generate a documentation in pdf please run the folling command:
+
+```bash
+npm run generate:docs
+```

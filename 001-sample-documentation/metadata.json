@@ -1,0 +1,13 @@
+{
+    "name": "Sample Documentation",
+    "entrypoint": "./0-main.md",
+    "pdfFilename":"sample-documentation.pdf",
+    "appendVersion": true,
+    "texTemplate": "./pandoc-resources/april.tex",
+    "sharedPandocLuaFilters": [
+        "linebreak.lua",
+        "htmltable.lua",
+        "include-files.lua",
+        "headerfilter.lua"
+    ]
+}
