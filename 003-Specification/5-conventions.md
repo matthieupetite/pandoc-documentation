@@ -10,10 +10,11 @@ For this project, we use Azure naming convention for all Azure resources except 
 suggests.
 
 | Reference                        | Requirements                                                                                               |
-| :------------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| OCB-AZ-NMC-01                    | VM must use client Custom Naming Convention                                                                |
-| OCB-AZ-NMC-02                    | All Azure resources except VM must use the Azure Naming Convention defined in the Cloud Adoption Framework |
-| OCB-AZ-NMC-03                    | All Azure resources (VM included) must be “coded” with Terraform and generated from azurecaf provider      |
+| :------------------------------- | :-------------------------------------------------- |
+| OBS-AZ-NMC-01                    | VM must use client Custom Naming Convention                                                                |
+| OBS-AZ-NMC-02                    | All Azure resources except VM must use the Azure Naming Convention defined in the Cloud Adoption Framework |
+| OBS-AZ-NMC-03                    | All Azure resources (VM included) must be “coded” with Terraform and generated from azurecaf provider      |
+
 :Naming convention requirements
 
 ### Azure naming convention
@@ -32,7 +33,7 @@ follow this naming format:
 
 **&lt;Resourcype&gt;-&lt;Workload/Application&gt;-&lt;Environment&gt;-&lt;AzureRegion&gt;-&lt;Instance&gt;**
 
-For example, a public IP resource for a production SharePoint workload in the West US region might be *pip-sharepoint-pro-westus-001* as
+For example, a public IP resource for a production SharePoint workload in the West US region might be **pip-sharepoint-pro-westus-001** as
 pictured in the Figure below:
 
 ![Naming convention sample](./assets/5-conventions/image38.png)
@@ -45,7 +46,6 @@ in a terraform loop for example.
 
 We respect Azure Cloud Adoption Framework (CAF) naming convention implementation rules. We extracted the useful information from the
 source [https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
-
 
 An effective naming convention composes resource names from important information about each resource. A good name helps you quickly identify
 the resource's type, associated workload, deployment environment, and the Azure region hosting it.
@@ -64,6 +64,7 @@ Keep the length of naming components short to prevent exceeding resource name le
 | Subscription name                | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads.xamples: prod, shared, client                                                                                                                                  |
 | Env                              | The environment name related to the deployment of the resources. For a core landing zone, the environment value is default. example: prod, nonprod|
 | location                         | The Azure region where the resource is deployed in a short version. For example France Central location will be name frc|
+
 :implementation rules
 
 ##### Example names: General
@@ -73,6 +74,7 @@ Keep the length of naming components short to prevent exceeding resource name le
 | Management Group                            | The naming convention for the management group are defined in chapter 3.2.1 - Management groups and subscription organization |
 | Subscription                                | The pattern to define subscription name is the following: sub-\<subscription name\>-\<env\> where the env value is optional.  |
 | Resource Group                              | The pattern to define resource group name name is the following: rg-\<resource group name\>-\<env\>-\<location\>-\<###\>       |
+
 :Naming convention general resources
 
 ##### Example names: Networking
@@ -97,6 +99,7 @@ Keep the length of naming components short to prevent exceeding resource name le
 | VPN site                        | The pattern to define VPN site name is the following: vst-\<site name\>-\<env\>-\<location\>-\<###>.                                             |
 | Virtual Network Gateway         | The pattern to define VPN site name is the following: vgw-\<gateway name\>-\<env\>-\<location\>-\<###>.                                          |
 | Application Gateway             | The pattern to define application gateway name is the following: agw-\<gateway name\>-\<env\>-\<location\>-\<###>.                               |
+
 :Naming convention Networking Resources
 
 ### Infrastructure as code
@@ -139,10 +142,11 @@ resource "azurerm_resource_group" "rg_sample" {
 
 ### Tagging Requirements
 
-| Reference                   | Requirements                                      | 
+| Reference                   | Requirements                                      |
 | :-------------------------- | :------------------------------------------------ |
-| OCB-AZ-TGC-01               | Key-Value pairs tagging standards                 |
-| OCB-AZ-TGC-02               | All resources that accept in Azure must be tagged |
+| OBS-AZ-TGC-01               | Key-Value pairs tagging standards                 |
+| OBS-AZ-TGC-02               | All resources that accept in Azure must be tagged |
+
 :Tagging Requirements
 
 ### Tagging description
@@ -168,12 +172,13 @@ We propose a set of tags with examples in the table below.
 | gen                     | automatic, manual                | required    | Type of generation (via Infrastructure as code or manually through portal) at the origin of the creation of the project     |
 | sub-stack-name          |                                  | optional    | Name of the subtack (in case of gen is automatic)                                                                           |
 | reseller                | OCB                              | required    | Name of the OBS reseller                                                                                                    |
-| tenant-name             | Circet                           | required    | Name of the tenant                                                                                                          | 
-| offer                   | multicloud-ready                 | required    | Type of offer that is at the origin of the creation of the project. Null for organization projects.                         |
-| customer-name           | Circet                           | required    | Name of the customer                                                                                                        |
+| tenant-name             | Klepierre                           | required    | Name of the tenant                                                                                                          |
+| offer                   | n/a                 | required    | Type of offer that is at the origin of the creation of the project. Null for organization projects.                         |
+| customer-name           | Klepierre                           | required    | Name of the customer                                                                                                        |
 | contract-id-type        | obs-contract-number              | required    |                                                                                                                             |
 | contract-id             | ocb0005652                       | required    |                                                                                                                             |
-| obs-contract-number     | ocb0005652                       | optionnel   | Contract number used in the multicloud-ready in order to export the billing to the creation of the cloudStore billing.      |
+| obs-contract-number     | ocb0005652                       | optionnel   | Contract number used in the n/a in order to export the billing to the creation of the cloudStore billing.      |
 | managed-level           | managed, co-managed, not-managed | required    | Identification of the level of OCB involvement on the tenant created (resale case)                                          |
-| region                  | frc                              | Required    | The location of the resources.                                                                                              |
+| region                  | westeu                              | Required    | The location of the resources.                                                                                              |
+
 :Tagging convention

@@ -1,0 +1,13 @@
+{
+    "name": "Work with Klepierre Starter Kit",
+    "entrypoint": "./0-main.md",
+    "pdfFilename":"work-with-klepierre-starter-kit.pdf",
+    "appendVersion": true,
+    "texTemplate": "./pandoc-resources/april.tex",
+    "sharedPandocLuaFilters": [
+        "linebreak.lua",
+        "htmltable.lua",
+        "include-files.lua",
+        "headerfilter.lua"
+    ]
+}

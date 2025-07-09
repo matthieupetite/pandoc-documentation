@@ -11,11 +11,11 @@ titlepage-rule-color: "360049"
 cover: true
 confidential: true
 use-page-background: true
-cover-background: ../assets/april-background.png
+cover-background: ../assets/orange-background.png
 cover-background-opacity: 0.9
-page-background: ../assets/april-page-background-draft.pdf
+page-background: ../assets/draft-background.pdf
 page-background-opacity: 0.2
-customer-logo: ../pandoc-resources/images/april-logo.png
+customer-logo: ../pandoc-resources/images/klepierre.png
 toc: true
 toc-depth: 9
 change-history: 

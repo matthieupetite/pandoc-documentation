@@ -7,5 +7,6 @@
 ./3.4-connectivity.md
 ./3.5-management.md
 ./3.6-devops.md
-./3.7-datascience.md
+./3.7-showup-ppr.md
+./3.8-showup-prod.md
 ```

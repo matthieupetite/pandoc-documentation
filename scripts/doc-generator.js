@@ -18,7 +18,7 @@ async function main() {
         for (const task of selectedDoc.prebuildtasks) {
           const taskModule = await import(`./lib/prebuild-tasks.js`);
           if (taskModule[task]) {
-            await taskModule[task]();
+            await taskModule[task](selectedDoc);
           } else {
             console.warn(emojify(`:bomb: Task ${task} not found in prebuild-tasks.js`));
           }
